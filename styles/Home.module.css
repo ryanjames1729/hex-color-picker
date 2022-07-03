@@ -12,6 +12,14 @@
   align-items: center;
 }
 
+.main a {
+  color: blue;
+}
+
+.main a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   display: flex;
   flex: 1;
@@ -83,6 +91,7 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  background-color: white;
 }
 
 .card:hover,
