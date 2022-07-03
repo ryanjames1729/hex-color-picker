@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import styles from '../../styles/Home.module.css'
+import Link from 'next/link'
 
 function colorNameToHex(color)
 {
@@ -92,7 +93,10 @@ const Color = () => {
         </div>
         
     </div>
-    <div style={{ backgroundColor: bgcolor, height: '100vh'}}></div>
+    <div style={{ backgroundColor: bgcolor, height: '20px'}}></div>
+    <footer className={styles.footer} style={{ backgroundColor: '#F0F0F0' }}>
+          <Link href="https://github.com/ryanjames1729"><a>Built by Ryan James</a></Link>
+      </footer>
     </>
   )
 }

@@ -36,6 +36,10 @@
   flex-grow: 1;
 }
 
+.footer a:hover {
+  text-decoration: underline;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;
