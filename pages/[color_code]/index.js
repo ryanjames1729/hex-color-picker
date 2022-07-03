@@ -12,10 +12,14 @@ const Color = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    const color_redirect = event.target.color_code.value;
-    console.log(color_redirect)
+    let color_redirect = event.target.color_code.value;
+    if(color_redirect.length > 0) {
+        color_redirect = color_redirect.toUpperCase();
+        console.log(color_redirect)
 
-    router.push('/' + color_redirect);
+        router.push('/' + color_redirect);
+    } else { router.push('/FFFFFF') }
+
   }
 
   return (
@@ -23,20 +27,26 @@ const Color = () => {
     <div style={{ backgroundColor: bgcolor, height: '100vh', marginTop: -20, padding: 50 }}>
         <div className={styles.main}>
             <div className={styles.card}>
-                <p>Color: {bgcolor}</p>
-                <form
-            onSubmit={handleSubmit}>
-              <label htmlFor="color_code">Color Code</label>
-              <textarea
-                name="color_code"
-                placeholder="FFFFFF"
-                id="color_code"
-                rows={1} 
-              />
-              <button
-                type="submit"
-              >Grab that color!</button>
-            </form>
+                <p>Current Color: {bgcolor}</p>
+                <div>
+                    <h1>Type in a new color:</h1>
+                    <form
+                    onSubmit={handleSubmit}>
+                    <label htmlFor="color_code"></label>
+                    <textarea
+                        name="color_code"
+                        placeholder={color_code}
+                        id="color_code"
+                        rows={1} 
+                        maxlength={6}
+                        className={styles.textarea}
+                    />
+                    <button
+                        type="submit"
+                        className={styles.button}
+                    >Grab that color!</button>
+                    </form>
+                </div>
             </div>
         </div>
         

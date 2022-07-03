@@ -31,7 +31,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by typig in a color below.
+          Get started by typing in a color below.
         </p>
 
         <div className={styles.container}>
