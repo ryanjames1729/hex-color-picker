@@ -67,7 +67,7 @@ const Color = () => {
   return (
     <>
     <div style={{ backgroundColor: bgcolor, height: '100vh', marginTop: -20, padding: 50 }}>
-        <div className={styles.main}>
+        <div className={styles.mainCard}>
             <div className={styles.card}>
                 <p>Current Color: {bgcolor}</p>
                 <div className={styles.form}>
